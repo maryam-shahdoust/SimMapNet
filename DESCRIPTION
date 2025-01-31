@@ -1,0 +1,11 @@
+Package: SimMapNet
+Type: Package
+Title: Bayesian Estimation of Sparse Precision Matrix
+Version: 0.1.0
+Author: Maryam shahdoust
+Maintainer:  <m.shahdoost@gmail.com>
+Description: SimMapNet estimates the precision matrix in a Bayesian framework utilizing additional information about feature similarities and applies sparsity via quantile-based thresholding.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.2
