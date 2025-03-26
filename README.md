@@ -17,4 +17,25 @@ devtools::install_github("maryam-shahdoust/SimMapNet")
 <img src="figures/SimMapNet_final.drawio.png" style="width:45%;" align=right>
 
 
-The SOS network in E. coli is a well-known regulatory network involved in the bacterial DNA damage response. Here, we use SimMapNet to infer the SOS GRN using gene expression data and GO similarity information. The SimMapNet gets the gene expression matrix and the matrix of distance between genes and give the estimation of precision matrix which is sparced using quantile thresholding. This estimation transfer to a binary matrix as an adjacency matrix of the network.
+The SOS network in E. coli is a well-characterized gene regulatory network (GRN) responsible for the bacterial DNA damage response. In this study, we use SimMapNet to infer the SOS GRN by integrating gene expression data with GO similarity information.
+
+SimMapNet takes as input a gene expression matrix and a gene distance matrix, estimating the precision matrix within a Bayesian framework. Sparsity is enforced using quantile-based thresholding, and the resulting sparse precision matrix is transformed into a binary adjacency matrix, representing the inferred regulatory network.
+
+SimMapNet Arguments:
+Y: A numeric matrix (n × p) representing the data matrix with n samples and p genes.
+
+nu: A positive value (> p - 1) representing the prior degrees of freedom for the Wishart distribution.
+
+distance: A numeric matrix (p × p) representing the distance between genes, computed as 1 - GO similarities.
+
+epsilon1: A small positive value ensuring the positive definiteness of the prior covariance matrix (ω).
+
+epsilon2: A small positive value ensuring the positive definiteness of the final precision matrix.
+
+alpha: A positive value controlling the kernel width parameter.
+
+kernel.id: An integer (1 or 2) specifying the kernel function (1 for Gaussian, 2 for Exponential).
+
+quantile_level: A value in (0,1) specifying the quantile threshold for sparsification.
+
+This approach allows the incorporation of prior biological knowledge through GO similarity-based distances, improving network inference accuracy.
