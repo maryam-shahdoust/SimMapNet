@@ -33,7 +33,8 @@ SimMapNet takes as input a gene expression matrix and a gene distance matrix, es
 This approach allows the incorporation of prior biological knowledge through GO similarity-based distances, improving network inference accuracy.
 
 **Data Pre-processing:**
-The gene expression data(Y) has to be norlmalized and centralized. To ensure the data conforms to a multivariate normal distribution, a normalization transformation is applied. One common transformation is log-transformation, where the \(\log_2\) of the data is computed. The gene expression vectors for each sample are then centralized so that their corresponding means are adjusted to zero.
+The gene expression data(Y) has to be norlmalized and centralized. If data are not normalized, use a normalization transformation such as log2-transformation.   
+The gene expression vectors for each sample are then centralized so that their corresponding means are adjusted to zero.
 ``` bash
 Data <- "SOS.data"
 Data.centralized <- scale(Data,center=TRUE,scale=FALSE)
@@ -41,5 +42,20 @@ Y <- Data.centralized
 ```
 
 **GO Similarities:**
+To integrate biological knowledge into network inference, we compute Gene Ontology (GO) similarities between genes. The GOSemSim package in R is used to quantify functional similarities based on GO annotations. Here, we compute similarities in the Molecular Function (MF) category, but other categories (Biological Process (BP) and Cellular Component (CC)) can also be used.
+The GO similarity matrix serves as a prior knowledge source, helping refine the inferred gene regulatory network by integrating biological relevance into network construction.
+```bash
+# Load necessary libraries
+library(GOSemSim)
+library(org.EcK12.eg.db)  # Database for E. coli gene annotations
+# Prepare GO similarity computation
+ec_go <- godata('org.EcK12.eg.db', ont = "MF", computeIC = FALSE)
+# Define a list of gene IDs
+genes <- c("recA","lexA","ssb","recF","dinI","rpoD","rpoH","rpoS")  
+# Compute pairwise GO similarities
+go_sim_matrix <- mgeneSim(genes, semData = ec_go, measure = "Wang", combine = "BMA")
+# Convert GO similarities to distance matrix (1 - similarity)
+distance_matrix <- 1 - go_sim_matrix
+```
 
 
