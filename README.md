@@ -32,3 +32,11 @@ SimMapNet takes as input a gene expression matrix and a gene distance matrix, es
 
 This approach allows the incorporation of prior biological knowledge through GO similarity-based distances, improving network inference accuracy.
 
+**Data Pre-processing:**
+The gene expression data(Y) has to be norlmalized and centralized. To ensure the data conforms to a multivariate normal distribution, a normalization transformation is applied. One common transformation is log-transformation, where the \(\log_2\) of the data is computed. The gene expression vectors for each sample are then centralized so that their corresponding means are adjusted to zero.
+Data <- "SOS.data"
+Data.centralized <- scale(Data,center=TRUE,scale=FALSE)
+Y <- Data.centralized
+**GO Similarities:**
+
+
