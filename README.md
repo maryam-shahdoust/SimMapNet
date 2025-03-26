@@ -17,4 +17,4 @@ devtools::install_github("maryam-shahdoust/SimMapNet")
 <img src="figures/SimMapNet_final.drawio.png" style="width:45%;" align=right>
 
 
-The SOS network in E. coli is a well-known regulatory network involved in the bacterial DNA damage response. Here, we use SimMapNet to infer the SOS GRN using gene expression data and GO similarity information.
+The SOS network in E. coli is a well-known regulatory network involved in the bacterial DNA damage response. Here, we use SimMapNet to infer the SOS GRN using gene expression data and GO similarity information. The SimMapNet gets the gene expression matrix and the matrix of distance between genes and give the estimation of precision matrix which is sparced using quantile thresholding. This estimation transfer to a binary matrix as an adjacency matrix of the network.
