@@ -57,5 +57,14 @@ go_sim_matrix <- mgeneSim(genes, semData = ec_go, measure = "Wang", combine = "B
 # Convert GO similarities to distance matrix (1 - similarity)
 distance_matrix <- 1 - go_sim_matrix
 ```
-
-
+**Network Construction**
+SimMapNet Arguments:
+- **Y**: A numeric matrix (n × p) representing the data matrix with n samples and p genes.
+- **nu**: A positive value (> p - 1) representing the prior degrees of freedom for the Wishart distribution.
+- **distance**: A numeric matrix (p × p) representing the distance between genes, computed as 1 - GO similarities.
+- **epsilon1**: A small positive value ensuring the positive definiteness of the prior covariance matrix (ω).
+- **epsilon2**: A small positive value ensuring the positive definiteness of the final precision matrix.
+- **alpha**: A positive value controlling the kernel width parameter.
+- **kernel.id**: An integer (1 or 2) specifying the kernel function (1 for Gaussian, 2 for Exponential).
+- **quantile_level**: A value in (0,1) specifying the quantile threshold for sparsification.
+SimMapNet has two outputs, the estimation of precision matrix and the adjacency matrix(the binariazed estimation of precision matrix).
