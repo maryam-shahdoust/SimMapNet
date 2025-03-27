@@ -1,3 +1,14 @@
+
+[![GitHub Issues](https://img.shields.io/github/issues/solislemuslab/CMiNet)](https://github.com/solislemuslab/CMiNet/issues)
+![Code Size](https://img.shields.io/github/languages/code-size/solislemuslab/CMiNet?color=white)
+[![GitHub Releases](https://img.shields.io/github/v/release/solislemuslab/CMiNet?display_name=tag)](https://github.com/solislemuslab/CMiNet/releases)
+
+
+
+
+
+
+
 ## SimMapNet : Bayesian Estimation of Precision Matrix using additional Information about variable relationships 
 
 ## Discription : 
