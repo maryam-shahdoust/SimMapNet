@@ -73,5 +73,6 @@ SOS_network <- SimMapNet(Y = Y, distance = distance_matrix,
 ```
 
 **Constructed Network**
-
-The constructed network 
+</div>
+<img src="figures/sos_netsplot2.png" style="width:45%;" align=right>
+The constructed SOS Gene regulatory networks based on MF along the reference network , representing the true network, are illustrated in the figure. In the networks each node shows a gene and each edge shows the relationship between genes. In the MF-GO network, true positive edges are in blue and false positives are in red. Comparing the constructed network to the reference network shows that the F1-score measure, the average of sensetivity and precision, is about 0.92.
