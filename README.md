@@ -1,7 +1,7 @@
 
-[![GitHub Issues](https://img.shields.io/github/issues/Maryam_Shahdoust/SimMapNet)](https://github.com/Maryam_Shahdoust/SimMapNet/issues) 
-![Code Size](https://img.shields.io/github/languages/code-size/Maryam_Shahdoust/SimMapNet?color=yellow)
-[![GitHub Releases](https://img.shields.io/github/v/release/Maryam_Shahdoust/SimMapNet?display_name=tag)](https://github.com/Maryam_Shahdoust/SimMapNet/releases)
+[![GitHub Issues](https://img.shields.io/github/issues/Maryam-Shahdoust/SimMapNet)](https://github.com/Maryam-Shahdoust/SimMapNet/issues) 
+![Code Size](https://img.shields.io/github/languages/code-size/Maryam-Shahdoust/SimMapNet?color=yellow)
+[![GitHub Releases](https://img.shields.io/github/v/release/Maryam-Shahdoust/SimMapNet?display_name=tag)](https://github.com/Maryam-Shahdoust/SimMapNet/releases)
 
 
 ## SimMapNet : Bayesian Estimation of Precision Matrix using additional Information about variable relationships 
