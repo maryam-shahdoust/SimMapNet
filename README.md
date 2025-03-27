@@ -17,6 +17,14 @@ The key innovation in SimMapNet is the integration of similarity-based informati
 A primary application of SimMapNet is in the construction of biological networks, such as Gene Regulatory Networks (GRNs), within a Gaussian graphical model framework. In this context, additional information—such as Gene Ontology (GO) similarities between genes—can be leveraged to improve network inference.
 SimMapNet provides a powerful approach for integrating biological knowledge into network estimation, enhancing the accuracy and interpretability of inferred relationships.  
 
+## Table of Contents
+- [Installation](#installation)
+- [An Example for Constructing Gene Regulatory Network by SimMapNet : Constructing the SOS Gene Regulatory Network ](#An Example for Constructing Gene Regulatory Network by SimMapNet : Constructing the SOS Gene Regulatory Network )
+  - [Data Pre-processing](#Data Pre-processing)
+  - [GO Similarities](#GO Similarities)
+  - [Network Construction](#Network Construction)
+  - [Constructed Network illustration](#Constructed Network illustration)
+
 ## Installation
 ```bash
 install.packages("devtools")
@@ -83,7 +91,7 @@ SOS_network <- SimMapNet(Y = Y, distance = distance_matrix,
                          kernel.id = kernel.id,quantile_level = quantile_level)[[2]]
 ```
 
-**Constructed Network**
+**Constructed Network illustration**
 
 The constructed SOS gene regulatory network based on Molecular Function GO (MF-GO), along with the reference network representing the true interactions, is illustrated in the figure. Each node represents a gene, and each edge represents a relationship between genes. In the MF-GO network, true positive edges (correctly inferred interactions) are shown in blue, while false positive edges (incorrectly inferred interactions) are shown in red. Comparing the constructed network to the reference network, the F1-score, which is the harmonic mean of sensitivity and precision, is approximately 0.92.
 </div>
