@@ -32,7 +32,7 @@ install.packages("devtools")
 devtools::install_github("maryam-shahdoust/SimMapNet")
 ```
 
-##  🔬 An Example for Constructing Gene Regulatory Network by SimMapNet : Constructing the SOS Gene Regulatory Network 
+##   An Example for Constructing Gene Regulatory Network by SimMapNet : Constructing the SOS Gene Regulatory Network 
 </div>
 <img src="figures/SimMapNet_final.drawio.png" style="width:40%;" align=right>
 The SOS network in E. coli is a well-characterized gene regulatory network (GRN) responsible for the bacterial DNA damage response. In this study, we use SimMapNet to infer the SOS GRN by integrating gene expression data with GO similarity information.
