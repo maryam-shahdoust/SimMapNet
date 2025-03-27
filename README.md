@@ -52,12 +52,15 @@ The GO similarity matrix serves as a prior knowledge source, helping refine the 
 # Load necessary libraries
 library(GOSemSim)
 library(org.EcK12.eg.db)  # Database for E. coli gene annotations
-# Prepare GO similarity computation
+# Load GO data
 ec_go <- godata('org.EcK12.eg.db', ont = "MF", computeIC = FALSE)
-# Define a list of gene IDs
-genes <- c("recA","lexA","ssb","recF","dinI","rpoD","rpoH","rpoS")  
-# Compute pairwise GO similarities
-go_sim_matrix <- mgeneSim(genes, semData = ec_go, measure = "Wang", combine = "BMA")
+# Convert gene symbols to Entrez IDs
+gene_symbols <- c("recA", "lexA", "ssb", "recF", "dinI", "rpoD", "rpoH", "rpoS")
+entrez_ids <- mapIds(org.EcK12.eg.db, keys = gene_symbols, keytype = "SYMBOL", column = "ENTREZID")
+# Remove NA values (unmapped genes)
+entrez_ids <- na.omit(entrez_ids)
+# Compute GO similarities
+go_sim_matrix <- mgeneSim(entrez_ids, semData = ec_go, measure = "Wang")
 # Convert GO similarities to distance matrix (1 - similarity)
 distance_matrix <- 1 - go_sim_matrix
 ```
