@@ -1,12 +1,10 @@
 
-[![GitHub Issues](https://img.shields.io/github/issues/solislemuslab/CMiNet)](https://github.com/solislemuslab/CMiNet/issues)
-![Code Size](https://img.shields.io/github/languages/code-size/solislemuslab/CMiNet?color=yellow)
-[![GitHub Releases](https://img.shields.io/github/v/release/solislemuslab/CMiNet?display_name=tag)](https://github.com/solislemuslab/CMiNet/releases)
-
-
-
-
-
+[![GitHub Issues](https://img.shields.io/github/issues/Maryam_Shahdoust/SimMapNet)](https://github.com/Maryam_Shahdoust/SimMapNet/issues) 
+![Code Size](https://img.shields.io/github/languages/code-size/Maryam_Shahdoust/SimMapNet?color=yellow)
+[![GitHub Releases](https://img.shields.io/github/v/release/Maryam_Shahdoust/SimMapNet?display_name=tag)](https://github.com/Maryam_Shahdoust/SimMapNet/releases)
+[![License](https://img.shields.io/github/license/Maryam_Shahdoust/SimMapNet)](https://github.com/Maryam_Shahdoust/SimMapNet/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/Maryam_Shahdoust/SimMapNet)](https://github.com/Maryam_Shahdoust/SimMapNet/graphs/contributors)
+[![Last Commit](https://img.shields.io/github/last-commit/Maryam_Shahdoust/SimMapNet)](https://github.com/Maryam_Shahdoust/SimMapNet/commits/main)
 
 
 ## SimMapNet : Bayesian Estimation of Precision Matrix using additional Information about variable relationships 
