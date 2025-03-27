@@ -74,12 +74,5 @@ SOS_network <- SimMapNet(Y = Y, distance = distance_matrix,
 
 **Constructed Network**
 
-The constructed SOS gene regulatory network based on Molecular Function GO (MF-GO), along with the reference network representing the true interactions, is illustrated in the figure. In these networks, each node represents a gene, and each edge represents a relationship between genes.
-
-In the MF-GO network:
--True positive edges (correctly inferred interactions) are shown in blue.
--False positive edges (incorrectly inferred interactions) are shown in red.
-
-Comparing the constructed network to the reference network, the F1-score—which is the harmonic mean of sensitivity and precision—is approximately 0.92.
-</div>
+The constructed SOS gene regulatory network based on Molecular Function GO (MF-GO), along with the reference network representing the true interactions, is illustrated in the figure. Each node represents a gene, and each edge represents a relationship between genes. In the MF-GO network, true positive edges (correctly inferred interactions) are shown in blue, while false positive edges (incorrectly inferred interactions) are shown in red. Comparing the constructed network to the reference network, the F1-score, which is the harmonic mean of sensitivity and precision, is approximately 0.92.
 <img src="figures/sos_netsplot2.png" style="width:40%;" align=center>
