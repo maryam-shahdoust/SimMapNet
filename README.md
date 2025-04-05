@@ -26,6 +26,20 @@ SimMapNet provides a powerful approach for integrating biological knowledge into
 install.packages("devtools")
 devtools::install_github("maryam-shahdoust/SimMapNet")
 ```
+## Required Packages
+
+```bash
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+## BiocManager::install("BiocUpgrade") ## you may need this
+BiocManager::install("GOSemSim")
+
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("org.EcK12.eg.db")
+```
+
 
 ##   An Example for Constructing Gene Regulatory Network by SimMapNet : Constructing the SOS Gene Regulatory Network 
 </div>
@@ -39,8 +53,9 @@ This approach allows the incorporation of prior biological knowledge through GO 
 **Data Pre-processing:**
 The gene expression data(Y) has to be norlmalized and centralized. If data are not normalized, use a normalization transformation such as log2-transformation.   
 The gene expression vectors for each sample are then centralized so that their corresponding means are adjusted to zero.
+Data =  "SOS.data"
 ``` bash
-Data <- "SOS.data"
+Data <- read.csv('SOS.data/SOS.data.csv')
 Data.centralized <- scale(Data,center=TRUE,scale=FALSE)
 Y <- Data.centralized
 ```
