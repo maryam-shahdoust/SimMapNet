@@ -43,7 +43,7 @@ BiocManager::install("org.EcK12.eg.db")
 
 ##   An Example for Constructing Gene Regulatory Network by SimMapNet : Constructing the SOS Gene Regulatory Network 
 </div>
-<img src="figures/SimMapNet_final.drawio.png" style="width:40%;" align=right>
+<img src="figures/SimMapNet_final_v2.drawio.png" style="width:40%;" align=right>
 The SOS network in E. coli is a well-characterized gene regulatory network (GRN) responsible for the bacterial DNA damage response. In this study, we use SimMapNet to infer the SOS GRN by integrating gene expression data with GO similarity information.
 
 SimMapNet takes as input a gene expression matrix and a gene distance matrix, estimating the precision matrix within a Bayesian framework. Sparsity is enforced using quantile-based thresholding, and the resulting sparse precision matrix is transformed into a binary adjacency matrix, representing the inferred regulatory network.
