@@ -53,7 +53,7 @@ This approach allows the incorporation of prior biological knowledge through GO 
 **Data Pre-processing:**
 The gene expression data(Y) has to be norlmalized and centralized. If data are not normalized, use a normalization transformation such as log2-transformation.   
 The gene expression vectors for each sample are then centralized so that their corresponding means are adjusted to zero.
-Data =  "SOS.data"
+As an example, we applied this preprocessing pipeline to the SOS dataset:
 ``` bash
 Data <- read.csv('SOS.data/SOS.data.csv')
 Data.centralized <- scale(Data,center=TRUE,scale=FALSE)
