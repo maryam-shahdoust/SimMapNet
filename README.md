@@ -15,10 +15,11 @@ SimMapNet provides a powerful approach for integrating biological knowledge into
 ## Table of Contents
 - [Installation](#installation)
 - [An Example for Constructing Gene Regulatory Network by SimMapNet: Constructing the SOS Gene Regulatory Network](#an-example-for-constructing-gene-regulatory-network-by-simmapnet-constructing-the-sos-gene-regulatory-network)
-  - [Data Pre-processing](#data-pre-processing)
-  - [GO Similarities](#go-similarities)
-  - [Network Construction](#network-construction)
-  - [Constructed Network Illustration](#constructed-network-illustration)
+  - [Data Pre-processing](#Data-Pre-processing)
+  - [GO Similarities](#Go-Similarities)
+  - [Network Construction](#Network-Construction)
+  - [Constructed Network Illustration](#Constructed-Network-Illustration)
+
 
 
 ## Installation
